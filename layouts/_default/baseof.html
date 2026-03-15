@@ -14,6 +14,7 @@
 {{- if .Site.Params.ThemeStyleSwitcher }}
 	<script src="{{ "js/theme-switcher.js" | relURL }}"></script>
 {{- end }}
+    <link rel="stylesheet" href="{{ "css/footer.css" | absURL }}">
 </head>
 <body>
 	<input class="show-hide-menu-input" style="display:none;" autocomplete="off" type="checkbox" id="toggle-1">
@@ -58,9 +59,9 @@
 	</div>
 {{- if .Site.Params.FooterText }}
 	<hr class="dont-show">
-	<footer class="footer">
-		<p>{{ .Site.Params.FooterText | markdownify }}</p>
-	</footer>
 {{- end }}
+		<footer class="footer">
+ 		   	{{- partial "footer.html" . -}}
+		</footer>
 </body>
 </html>
