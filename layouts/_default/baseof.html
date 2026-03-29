@@ -11,6 +11,7 @@
 	<title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 	<link rel="stylesheet" href="{{ "css/styles.css" | relURL }}">
 	<link id="theme_css" rel="stylesheet" href="{{ "css/themes" | relURL }}/{{ .Site.Params.ThemeStyle | default $themeStyleDefault }}">
+	<link rel="icon" href="{{ "images/favicon.png" | relURL }}" type="image/png">
 {{- if .Site.Params.ThemeStyleSwitcher }}
 	<script src="{{ "js/theme-switcher.js" | relURL }}"></script>
 {{- end }}
