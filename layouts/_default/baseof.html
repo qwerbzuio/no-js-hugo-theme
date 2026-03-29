@@ -44,8 +44,10 @@
 						</p>
 					</div>
 					<ul class="links">
+{{ $currentPage := . }}
 {{- range .Site.Menus.main.ByWeight }}
-						<li><a href="{{ .URL }}">{{ .Name }}</a></li>
+{{ $isActive := $currentPage.IsMenuCurrent .Menu . }}
+						<li class="{{ if $isActive }}activemenu{{ end}}"><a href="{{ .URL }}">{{ .Name }}</a></li>
 {{- end }}
 					</ul>
 {{- end }}
