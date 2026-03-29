@@ -56,12 +56,12 @@
 				{{- block "main" . }}{{ end }}
 			</div>
 		</main>
+		<footer class="footer">
+ 		   	{{- partial "footer.html" . -}}
+		</footer>
 	</div>
 {{- if .Site.Params.FooterText }}
 	<hr class="dont-show">
 {{- end }}
-		<footer class="footer">
- 		   	{{- partial "footer.html" . -}}
-		</footer>
 </body>
 </html>
