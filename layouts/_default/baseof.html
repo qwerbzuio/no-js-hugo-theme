@@ -23,10 +23,18 @@
 	<div class="main">
 		<header class="header">
 			<div class="header-content">
+{{- with .Site.Params.HeaderImage }}
+				<div class="site-logo">
+					<a href="{{ $.Site.BaseURL }}">
+						<img src="{{ . | relURL }}" alt="{{ $.Site.Title }}">
+					</a>
+				</div>
+{{- else }}
 				<div class="title">
 					<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 				</div>
-				<div>
+{{- end }}
+				<div class="header-nav">
 					<div class="header-right">
 {{- if .Site.Params.ThemeStyleSwitcher }}
 						<div id="change-theme-button" style="display:none;" class="clickable-header-label" onclick="toggle_theme()">
