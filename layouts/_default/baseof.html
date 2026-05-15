@@ -42,7 +42,7 @@
 					<ul class="links">
 {{ $currentPage := . }}
 {{- range .Site.Menus.main.ByWeight }}
-{{ $isActive := $currentPage.IsMenuCurrent .Menu . }}
+{{ $isActive := partial "menu-entry-active.html" (dict "page" $currentPage "entry" .) }}
 						<li class="{{ if $isActive }}activemenu{{ end}}"><a href="{{ .URL }}">{{ .Name }}</a></li>
 {{- end }}
 					</ul>
