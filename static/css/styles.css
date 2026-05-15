@@ -26,7 +26,13 @@ h1, h2, h3, h4, h5, h6 {
 	h3:hover .heading-anchor,
 	h4:hover .heading-anchor,
 	h5:hover .heading-anchor,
-	h6:hover .heading-anchor {
+	h6:hover .heading-anchor,
+	h1:hover .heading-top,
+	h2:hover .heading-top,
+	h3:hover .heading-top,
+	h4:hover .heading-top,
+	h5:hover .heading-top,
+	h6:hover .heading-top {
 		visibility: visible;
 	}
 
@@ -35,12 +41,19 @@ h1, h2, h3, h4, h5, h6 {
 	h3 .heading-anchor,
 	h4 .heading-anchor,
 	h5 .heading-anchor,
-	h6 .heading-anchor {
+	h6 .heading-anchor,
+	h1 .heading-top,
+	h2 .heading-top,
+	h3 .heading-top,
+	h4 .heading-top,
+	h5 .heading-top,
+	h6 .heading-top {
 		visibility: hidden;
 	}
 }
 
-.heading-anchor {
+.heading-anchor,
+.heading-top {
 	/* this is used on an "aside" tag so that it's not shown in the browser's reader mode */
 	display: inline;
 	color: grey;
@@ -48,11 +61,13 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 0.75em;
 }
 
-.heading-anchor a:hover {
+.heading-anchor a:hover,
+.heading-top a:hover {
 	text-decoration: none;
 }
 
-.heading-anchor img {
+.heading-anchor img,
+.heading-top img {
 	height: 1em;
 }
 
