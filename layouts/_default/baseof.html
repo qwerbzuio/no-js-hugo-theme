@@ -30,7 +30,7 @@
 				</div>
 {{- end }}
 				<div class="header-text-column">
-					<div class="title header-site-title">
+					<div class="title header-site-title{{ if .IsHome }} activemenu{{ end }}">
 						<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 					</div>
 {{- if .Site.Menus.main }}
