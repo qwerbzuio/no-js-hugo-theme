@@ -29,21 +29,10 @@
 						<img src="{{ . | relURL }}" alt="{{ $.Site.Title }}">
 					</a>
 				</div>
-{{- else }}
-				<div class="title">
-					<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-				</div>
 {{- end }}
-				<div class="header-nav">
-					<div class="header-right">
-{{- if .Site.Params.ThemeStyleSwitcher }}
-						<div id="change-theme-button" style="display:none;" class="clickable-header-label" onclick="toggle_theme()">
-							<img class="color-adapting-image" width="30" src="" alt="change theme button">
-						</div>
-{{- end }}
-						<label id="show-hide-menu-label" class="clickable-header-label" for="toggle-1">
-							<img class="color-adapting-image" width="30" src="{{ "images/hamburger.svg" | relURL }}" alt="menu button">
-						</label>
+				<div class="header-text-column">
+					<div class="title header-site-title">
+						<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 					</div>
 {{- if .Site.Menus.main }}
 					<div class="dont-show">
@@ -59,6 +48,16 @@
 {{- end }}
 					</ul>
 {{- end }}
+				</div>
+				<div class="header-right">
+{{- if .Site.Params.ThemeStyleSwitcher }}
+					<div id="change-theme-button" style="display:none;" class="clickable-header-label" onclick="toggle_theme()">
+						<img class="color-adapting-image" width="30" src="" alt="change theme button">
+					</div>
+{{- end }}
+					<label id="show-hide-menu-label" class="clickable-header-label" for="toggle-1">
+						<img class="color-adapting-image" width="30" src="{{ "images/hamburger.svg" | relURL }}" alt="menu button">
+					</label>
 				</div>
 			</div>
 		</header>
