@@ -4,7 +4,7 @@
 <html lang="{{ .Site.LanguageCode }}">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, viewport-fit=cover">
 {{- if isset .Site.Params "onionlocation" }}
 	<meta http-equiv="onion-location" content="{{ urls.JoinPath .Site.Params.OnionLocation .RelPermalink }}">
 {{- end }}
@@ -18,9 +18,8 @@
 	<link rel="stylesheet" href="{{ "css/userstyles.css" | relURL }}">
 </head>
 <body id="top">
-	<input class="show-hide-menu-input" style="display:none;" autocomplete="off" type="checkbox" id="toggle-1">
-	<label class="overlay" for="toggle-1"></label>
 	<div class="main">
+		<input class="show-hide-menu-input" style="display:none;" autocomplete="off" type="checkbox" id="toggle-1">
 		<header class="header">
 			<div class="header-content">
 {{- with .Site.Params.HeaderImage }}
@@ -69,6 +68,7 @@
 		<footer class="footer">
  		   	{{- partial "footer.html" . -}}
 		</footer>
+		<label class="overlay" for="toggle-1"></label>
 	</div>
 {{- if .Site.Params.FooterText }}
 	<hr class="dont-show">

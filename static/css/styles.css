@@ -533,11 +533,11 @@ body {
 		display: inherit;
 	}
 
-	.show-hide-menu-input:checked ~ .main .links {
+	.show-hide-menu-input:checked ~ .header .links {
 		display: inherit;
 	}
 
-	.show-hide-menu-input:checked ~ .main #show-hide-menu-label > img {
+	.show-hide-menu-input:checked ~ .header #show-hide-menu-label > img {
 		transform: rotate(90deg);
 	}
 
